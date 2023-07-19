@@ -19,7 +19,7 @@ const speedo = {
 			//speedo.distances();
 			this.meters.innerHTML += `${JSON.stringify(x.coords.latitude)}<br>`; 
 		},(e)=>{
-			this.meters.innerHTML = JSON.stringify(e);
+			handleerror(e);
 		});
 		
 	},
@@ -38,9 +38,7 @@ const speedo = {
 		//this.distances();
 		//this.update();
 		find('#startbutton').onclick = ()=>{
-			navigator.geolocation.getCurrentPosition((x)=>{
-				this.meters.innerHTML += `${x.coords.longitude}, ${x.coords.latitude}<br>`;
-			})
+			navigator.geolocation.getCurrentPosition(handlepos,handleerror);
 		}
 	},
 	calcDistance(to){
@@ -49,5 +47,11 @@ const speedo = {
 		this.meters.innerHTML = `${distance} m<br>${JSON.stringify(to)}`;
 		this.start = to;
 	}
+}
+const handlePos = (x)=>{
+	this.meters.innerHTML += `${x.coords.longitude}, ${x.coords.latitude}<br>`;
+}
+const handleerror = (x)=>{
+	speedo.meters.innerHTML += 'error found!';
 }
 speedo.init();
