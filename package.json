@@ -1,0 +1,19 @@
+{
+  "name": "speedoapp",
+  "version": "1.0.0",
+  "description": "tracking app",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gemasajaa/speedoapp.git"
+  },
+  "author": "gema",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gemasajaa/speedoapp/issues"
+  },
+  "homepage": "https://github.com/gemasajaa/speedoapp#readme"
+}
