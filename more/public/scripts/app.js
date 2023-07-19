@@ -17,7 +17,7 @@ const speedo = {
 			//this.calcDistance(posobj);
 			
 			//speedo.distances();
-			this.meters.innerHTML += `${JSON.stringify(x.coords)}<br>`; 
+			this.meters.innerHTML += `${JSON.stringify(x.coords.latitude)}<br>`; 
 		},(e)=>{
 			this.meters.innerHTML = JSON.stringify(e);
 		});
