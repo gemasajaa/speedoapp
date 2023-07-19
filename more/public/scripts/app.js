@@ -40,7 +40,7 @@ const speedo = {
 	calcDistance(to){
 		const distance = distVincenty(this.start.lat,this.start.lon,to.lat,to.lon);
 		this.distance += distance;
-		this.meters.innerHTML = `${distance}`;
+		this.meters.innerHTML = `${distance} m<br>${JSON.stringify(to)}`;
 		this.start = to;
 	}
 }
