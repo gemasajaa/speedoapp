@@ -38,7 +38,7 @@ const speedo = {
 		//this.distances();
 		//this.update();
 		find('#startbutton').onclick = ()=>{
-			navigator.geolocation.getCurrentPosition(handlepos,handleerror);
+			navigator.geolocation.getCurrentPosition(handlePos,handleError);
 		}
 	},
 	calcDistance(to){
@@ -51,7 +51,7 @@ const speedo = {
 const handlePos = (x)=>{
 	this.meters.innerHTML += `${x.coords.longitude}, ${x.coords.latitude}<br>`;
 }
-const handleerror = (x)=>{
+const handleError = (x)=>{
 	speedo.meters.innerHTML += 'error found!';
 }
 speedo.init();
