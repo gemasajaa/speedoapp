@@ -16,8 +16,6 @@ const speedo = {
 			
 			this.calcDistance(posobj);
 			
-			this.meters.innerHTML = `${JSON.stringify(posobj)}<br>`;
-			
 		},(e)=>{
 			console.log(e);
 		});
@@ -42,6 +40,7 @@ const speedo = {
 	calcDistance(to){
 		const distance = distVincenty(this.start.lat,this.start.lon,to.lat,to.lon);
 		this.distance += distance;
+		this.meters.innerHTML = `${distance}`;
 		this.start = to;
 	}
 }
