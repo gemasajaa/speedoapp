@@ -16,7 +16,7 @@ const speedo = {
 			
 			this.calcDistance(posobj);
 			
-			this.meters.innerHTML = `${this.distance} m`;
+			this.meters.innerHTML = `${JSON.stringify(posobj)}<br>`;
 			
 		},(e)=>{
 			console.log(e);
