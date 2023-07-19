@@ -37,7 +37,11 @@ const speedo = {
 		//getting permission.
 		//this.distances();
 		//this.update();
-		find('')
+		find('#startbutton').onclick = ()=>{
+			navigator.geolocation.getCurrentPosition((x)=>{
+				this.meters.innerHTML += `${x.coords.longitude}, ${x.coords.latitude}<br>`;
+			})
+		}
 	},
 	calcDistance(to){
 		const distance = distVincenty(this.start.lat,this.start.lon,to.lat,to.lon);
