@@ -16,8 +16,9 @@ const speedo = {
 			
 			this.calcDistance(posobj);
 			
+			speedo.distances();
 		},(e)=>{
-			console.log(e);
+			this.meters.innerHTML = JSON.stringify(e);
 		});
 		
 	},
@@ -25,7 +26,7 @@ const speedo = {
 		this.seconds += 1;
 		this.timer.innerHTML = `${this.seconds} s`;
 		//get data longi dan lati.
-		this.distances();
+		//this.distances();
 	},
 	update(){
 		this.process();
