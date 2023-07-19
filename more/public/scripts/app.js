@@ -35,9 +35,9 @@ const speedo = {
 	},
 	init(){
 		//getting permission.
-		this.distances();
-		this.update();
-		
+		//this.distances();
+		//this.update();
+		find('')
 	},
 	calcDistance(to){
 		const distance = distVincenty(this.start.lat,this.start.lon,to.lat,to.lon);
