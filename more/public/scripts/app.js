@@ -14,9 +14,10 @@ const speedo = {
 			
 			this.coords.push(posobj);
 			
-			this.calcDistance(posobj);
+			//this.calcDistance(posobj);
 			
 			//speedo.distances();
+			this.meters.innerHTML += 'called<br>'; 
 		},(e)=>{
 			this.meters.innerHTML = JSON.stringify(e);
 		});
