@@ -30,7 +30,7 @@ const speedo = {
 	},
 	update(){
 		//this.process();
-		setTimeout(()=>{speedo.update()},1000);
+		//setTimeout(()=>{speedo.update()},1000);
 	},
 	init(){
 		//getting permission.
