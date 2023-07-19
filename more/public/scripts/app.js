@@ -29,7 +29,7 @@ const speedo = {
 		//this.distances();
 	},
 	update(){
-		this.process();
+		//this.process();
 		setTimeout(()=>{speedo.update()},1000);
 	},
 	init(){
